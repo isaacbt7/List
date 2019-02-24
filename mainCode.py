@@ -8,7 +8,7 @@ while True:
     # muestra la lista extraida de la pagina
     for dir in info:
         print(str(num)+" -> "+dir)
-        num=num +1
+        num=num + 1
     opUrl.url_back(address)
     # It is asking for next directory
     directory = input("Choose a number. forward  --> / <--- backward. A letter \"q\" : ")
@@ -18,7 +18,6 @@ while True:
         print("<--- "+address)
     else:
         try:
-            # address = address + info[int(directory)-1]
             # checking if the url has a file or it is another directory.
             if info[int(directory)-1].find(".mp3", 0, len(info[int(directory)-1])) != -1:
                 print("Downloading...")
